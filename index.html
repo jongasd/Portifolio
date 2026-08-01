@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -17,7 +17,11 @@
       href="https://cdn.jsdelivr.net/gh/devicon/devicon@latest/devicon.min.css"
     />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="shortcut icon" href="src/images/Gemini_Generated_Image_o8nym9o8nym9o8ny-removebg-preview.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="src/images/Gemini_Generated_Image_o8nym9o8nym9o8ny-removebg-preview.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="src/styles/style.css" />
   </head>
   <body>
@@ -28,11 +32,30 @@
         </a>
 
         <ul class="nav-links" id="nav-links">
-          <li><a href="#about" class="nav-link">Studio</a></li>
-          <li><a href="#expertise" class="nav-link">Expertise</a></li>
-          <li><a href="#works" class="nav-link">Projetos</a></li>
-          <li><a href="#contact" class="nav-btn">Contato</a></li>
+          <li>
+            <a href="#about" class="nav-link" data-i18n="nav.studio">Studio</a>
+          </li>
+          <li>
+            <a href="#expertise" class="nav-link" data-i18n="nav.expertise"
+              >Expertise</a
+            >
+          </li>
+          <li>
+            <a href="#works" class="nav-link" data-i18n="nav.works">Projetos</a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-btn" data-i18n="nav.contact"
+              >Contato</a
+            >
+          </li>
         </ul>
+
+        <div class="lang-switcher" id="lang-switcher">
+          <button class="lang-option active" data-lang="pt" type="button">
+            PT-BR
+          </button>
+          <button class="lang-option" data-lang="en" type="button">EN</button>
+        </div>
 
         <div class="hamburger" id="hamburger">
           <i class="ph ph-list"></i>
@@ -44,20 +67,25 @@
       <section id="hero" class="hero-section">
         <div class="hero-bg-animation"></div>
         <div class="container hero-content reveal">
-          <p class="hero-kicker">Desenvolvedor & Criativo</p>
-          <h1 class="hero-title">
+          <p class="hero-kicker" data-i18n="hero.kicker">
+            Desenvolvedor & Criativo
+          </p>
+          <h1 class="hero-title" data-i18n="hero.title">
             Criando experiências digitais de
             <span class="text-gradient">outro nível.</span>
           </h1>
-          <p class="hero-subtitle">
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
             Especialista em transformar ideias complexas em interfaces
             funcionais, rápidas e visualmente impactantes.
           </p>
           <div class="hero-actions">
             <a href="#works" class="btn btn-primary"
-              >Ver Portfólio <i class="ph ph-arrow-down"></i
+              ><span data-i18n="hero.btnPortfolio">Ver Portfólio</span>
+              <i class="ph ph-arrow-down"></i
             ></a>
-            <a href="#contact" class="btn btn-ghost">Vamos Conversar</a>
+            <a href="#contact" class="btn btn-ghost" data-i18n="hero.btnTalk"
+              >Vamos Conversar</a
+            >
           </div>
         </div>
       </section>
@@ -69,13 +97,13 @@
             <div class="image-accent-border"></div>
           </div>
           <div class="about-text reveal-right">
-            <h2 class="section-heading">
+            <h2 class="section-heading" data-i18n="about.heading">
               O <span class="text-gradient">Studio</span>
             </h2>
-            <h3 class="about-subheading">
+            <h3 class="about-subheading" data-i18n="about.subheading">
               Mais do que código, eu construo soluções.
             </h3>
-            <p>
+            <p data-i18n="about.text">
               Olá! Meu nome é Jonas Daniel de Brito Lopes, tenho 17 anos e sou
               um programador Backend Júnior apaixonado por tecnologia e
               desenvolvimento de software. Possuo mais de 4 anos de experiência
@@ -91,11 +119,15 @@
             <div class="stats-row">
               <div class="stat-item">
                 <span class="stat-number text-gradient">4+</span>
-                <span class="stat-label">Projetos Entregues</span>
+                <span class="stat-label" data-i18n="about.statProjects"
+                  >Projetos Entregues</span
+                >
               </div>
               <div class="stat-item">
                 <span class="stat-number text-gradient">4+</span>
-                <span class="stat-label">Anos de Experiência</span>
+                <span class="stat-label" data-i18n="about.statYears"
+                  >Anos de Experiência</span
+                >
               </div>
             </div>
           </div>
@@ -104,7 +136,10 @@
 
       <section id="expertise" class="section expertise-section">
         <div class="container">
-          <h2 class="section-heading center-heading reveal">
+          <h2
+            class="section-heading center-heading reveal"
+            data-i18n="expertise.heading"
+          >
             Minha <span class="text-gradient">Expertise</span>
           </h2>
 
@@ -173,7 +208,7 @@
             </div>
 
             <div class="skills-column">
-              <h3>
+              <h3 data-i18n="expertise.toolsHeading">
                 <i class="ph ph-paint-brush-broad"></i> Ferramentas & Design
               </h3>
 
@@ -240,10 +275,10 @@
       <section id="skills" class="skills-section">
         <div class="container">
           <div class="section-header reveal">
-            <h2 class="section-title">
+            <h2 class="section-title" data-i18n="skills.heading">
               Minhas <span class="highlight">Habilidades</span>
             </h2>
-            <p class="section-subtitle">
+            <p class="section-subtitle" data-i18n="skills.subtitle">
               Tecnologias e ferramentas que domino.
             </p>
           </div>
@@ -251,7 +286,8 @@
           <div class="skills-wrapper">
             <div class="skill-category reveal">
               <h3 class="category-title">
-                <i class="ph ph-code"></i> Linguagens
+                <i class="ph ph-code"></i>
+                <span data-i18n="skills.languages">Linguagens</span>
               </h3>
               <div class="skills-grid">
                 <div class="skill-card">
@@ -307,7 +343,8 @@
 
             <div class="skill-category reveal">
               <h3 class="category-title">
-                <i class="ph ph-database"></i> Frameworks & Dados
+                <i class="ph ph-database"></i>
+                <span data-i18n="skills.frameworks">Frameworks & Dados</span>
               </h3>
               <div class="skills-grid">
                 <div class="skill-card">
@@ -363,7 +400,8 @@
 
             <div class="skill-category reveal">
               <h3 class="category-title">
-                <i class="ph ph-toolbox"></i> Ferramentas
+                <i class="ph ph-toolbox"></i>
+                <span data-i18n="skills.tools">Ferramentas</span>
               </h3>
               <div class="skills-grid">
                 <div class="skill-card">
@@ -413,10 +451,10 @@
       </section>
       <section id="works" class="section works-section">
         <div class="container">
-          <h2 class="section-heading reveal">
+          <h2 class="section-heading reveal" data-i18n="works.heading">
             Trabalhos <span class="text-gradient">Selecionados</span>
           </h2>
-          <p class="section-subtitle reveal">
+          <p class="section-subtitle reveal" data-i18n="works.subtitle">
             Uma coleção de projetos que definem minha trajetória.
           </p>
 
@@ -440,7 +478,7 @@
                   <span>Node.js</span>
                   <span>Express</span>
                 </div>
-                <p class="project-desc">
+                <p class="project-desc" data-i18n="works.p1.desc">
                   O TechPartz Eletrônicos foi um projeto desenvolvido em equipe
                   em conjunto com a equipe do SENAI em Itu-SP. O objetivo desse
                   projeto foi desenvolver uma aplicação para uma empresa de
@@ -453,12 +491,14 @@
                 </p>
                 <div class="project-links-text">
                   <a href="#" class="text-link"
-                    >Visitar Site<i class="ph ph-caret-right"></i
+                    ><span data-i18n="works.visitSite">Visitar Site</span
+                    ><i class="ph ph-caret-right"></i
                   ></a>
                   <a
                     href="https://github.com/jongasd/SENAI/tree/main/Projeto%20Software"
                     class="text-link github"
-                    ><i class="ph ph-github-logo"></i> Código</a
+                    ><i class="ph ph-github-logo"></i>
+                    <span data-i18n="works.code">Código</span></a
                   >
                 </div>
               </div>
@@ -466,12 +506,12 @@
 
             <article class="project-spotlight inverted reveal">
               <div class="project-preview">
-                <img
-                  src="src/images/projeto-revista.png"
-                  alt="Conecta Jovem"
-                />
+                <img src="src/images/projeto-revista.png" alt="Conecta Jovem" />
                 <div class="project-overlay">
-                  <a href="https://projeto-revista.vercel.app" target="_blank" class="btn-icon"
+                  <a
+                    href="https://projeto-revista.vercel.app"
+                    target="_blank"
+                    class="btn-icon"
                     ><i class="ph ph-arrow-square-out"></i
                   ></a>
                 </div>
@@ -484,7 +524,7 @@
                   <span>HTML</span>
                   <span>CSS</span>
                 </div>
-                <p class="project-desc">
+                <p class="project-desc" data-i18n="works.p2.desc">
                   Projeto desenvolvido para o SESI com o objetivo de divulgar
                   notícias e informações de forma organizada e acessível,
                   funcionando como uma revista digital para a comunidade
@@ -492,12 +532,14 @@
                 </p>
                 <div class="project-links-text">
                   <a href="https://projeto-revista.vercel.app" class="text-link"
-                    >Visitar Site<i class="ph ph-caret-right"></i
+                    ><span data-i18n="works.visitSite">Visitar Site</span
+                    ><i class="ph ph-caret-right"></i
                   ></a>
                   <a
                     href="https://github.com/jongasd/projeto-revista"
                     class="text-link github"
-                    ><i class="ph ph-github-logo"></i> Código</a
+                    ><i class="ph ph-github-logo"></i>
+                    <span data-i18n="works.code">Código</span></a
                   >
                 </div>
               </div>
@@ -522,20 +564,22 @@
                   <span>Node.js</span>
                   <span>React Native</span>
                 </div>
-                <p class="project-desc">
+                <p class="project-desc" data-i18n="works.p3.desc">
                   Projeto pessoal de um sistema PDV (Ponto de Venda) para um
-                  aplicativo de minimercado de condomínio, permitindo o
-                  registro de vendas, controle de produtos e gestão do
-                  pequeno negócio de forma prática.
+                  aplicativo de minimercado de condomínio, permitindo o registro
+                  de vendas, controle de produtos e gestão do pequeno negócio de
+                  forma prática.
                 </p>
                 <div class="project-links-text">
                   <a href="#" class="text-link"
-                    >Visitar Site<i class="ph ph-caret-right"></i
+                    ><span data-i18n="works.visitSite">Visitar Site</span
+                    ><i class="ph ph-caret-right"></i
                   ></a>
                   <a
                     href="https://github.com/jongasd/fcondo-system"
                     class="text-link github"
-                    ><i class="ph ph-github-logo"></i> Código</a
+                    ><i class="ph ph-github-logo"></i>
+                    <span data-i18n="works.code">Código</span></a
                   >
                 </div>
               </div>
@@ -555,11 +599,13 @@
               </div>
               <div class="project-details">
                 <span class="project-number">04.</span>
-                <h3 class="project-title">Gerador de Senhas Fortes</h3>
+                <h3 class="project-title" data-i18n="works.p4.title">
+                  Gerador de Senhas Fortes
+                </h3>
                 <div class="project-tags">
                   <span>JavaScript</span>
                 </div>
-                <p class="project-desc">
+                <p class="project-desc" data-i18n="works.p4.desc">
                   Este projeto consiste em um gerador de senhas fortes,
                   desenvolvido com o objetivo de auxiliar usuários na criação de
                   senhas seguras para suas contas. A aplicação contribui
@@ -569,12 +615,14 @@
                 </p>
                 <div class="project-links-text">
                   <a href="#" class="text-link"
-                    >Visitar Site <i class="ph ph-caret-right"></i
+                    ><span data-i18n="works.visitSite">Visitar Site</span>
+                    <i class="ph ph-caret-right"></i
                   ></a>
                   <a
                     href="https://github.com/jongasd/Projetos-Lopes/tree/main/Html%2C%20Css%2C%20JS/Gerador%20de%20Senhas%20Online"
                     class="text-link github"
-                    ><i class="ph ph-github-logo"></i> Código</a
+                    ><i class="ph ph-github-logo"></i>
+                    <span data-i18n="works.code">Código</span></a
                   >
                 </div>
               </div>
@@ -586,19 +634,16 @@
       <section id="contact" class="section contact-section">
         <div class="container contact-wrapper reveal-up">
           <div class="contact-card">
-            <h2 class="contact-title">
+            <h2 class="contact-title" data-i18n="contact.title">
               Vamos construir algo
               <span class="text-gradient">incrível</span> juntos?
             </h2>
-            <p class="contact-text">
+            <p class="contact-text" data-i18n="contact.text">
               Estou sempre aberto a discutir novos projetos, ideias criativas ou
               oportunidades de fazer parte de suas visões.
             </p>
 
-            <a
-              href="mailto:lopesjonasdaniel@gmail.com"
-              class="email-big-link"
-            >
+            <a href="mailto:lopesjonasdaniel@gmail.com" class="email-big-link">
               lopesjonasdaniel@gmail.com
               <i class="ph ph-arrow-up-right"></i>
             </a>
@@ -625,7 +670,9 @@
 
     <footer class="footer">
       <div class="container">
-        <p>© 2025 Jonas Daniel. Todos os Direitos Reservados.</p>
+        <p data-i18n="footer.text">
+          © 2025 Jonas Daniel. Todos os Direitos Reservados.
+        </p>
       </div>
     </footer>
 

@@ -1,20 +1,17 @@
 /* --- Configurações Globais e Variáveis --- */
 :root {
-  /* Paleta de Cores (Dark & Purple Neon) */
-  --bg-main: #0a0a0c; /* Fundo principal mais escuro */
-  --bg-secondary: #121216; /* Fundo de seções secundárias */
-  --bg-card-glass: rgba(30, 30, 40, 0.6); /* Efeito vidro */
+  --bg-main: #0a0a0c;
+  --bg-secondary: #121216;
+  --bg-card-glass: rgba(30, 30, 40, 0.6);
 
   --text-primary: #ffffff;
   --text-secondary: #a0a0b0;
 
-  /* Roxo Neon e variantes */
   --accent-purple: #8a2be2;
   --accent-light: #c471ed;
   --accent-dark: #5923a5;
   --accent-glow: 0 0 20px rgba(138, 43, 226, 0.4);
 
-  /* Tipografia */
   --font-heading: "Outfit", sans-serif;
   --font-body: "Inter", sans-serif;
 
@@ -28,7 +25,6 @@
   --text-gray: #a8a8b3;
 }
 
-/* Reset Básico */
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +42,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Utilitários de Texto */
 h1,
 h2,
 h3,
@@ -67,7 +62,6 @@ img {
   display: block;
 }
 
-/* Gradiente de Texto (Usado para destaque) */
 .text-gradient {
   background: linear-gradient(
     135deg,
@@ -111,7 +105,6 @@ img {
   gap: 0.5rem;
   transition: all 0.3s ease;
 }
-
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-purple), var(--accent-dark));
   color: white;
@@ -121,7 +114,6 @@ img {
   transform: translateY(-3px);
   box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
 }
-
 .btn-ghost {
   background: transparent;
   border: 2px solid var(--accent-purple);
@@ -139,14 +131,13 @@ img {
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  background: rgba(10, 10, 12, 0.7); /* Transparência */
-  backdrop-filter: blur(12px); /* Efeito de desfoque */
+  background: rgba(10, 10, 12, 0.7);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   z-index: 1000;
   display: flex;
   align-items: center;
 }
-
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -154,8 +145,8 @@ img {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 1.5rem;
 }
-
 .logo {
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -168,11 +159,11 @@ img {
 .logo-symbol {
   color: var(--accent-purple);
 }
-
 .nav-links {
   display: flex;
   gap: 2.5rem;
   align-items: center;
+  margin-left: auto;
 }
 .nav-link {
   color: var(--text-secondary);
@@ -182,7 +173,6 @@ img {
 .nav-link:hover {
   color: var(--accent-purple);
 }
-
 .nav-btn {
   padding: 0.6rem 1.5rem;
   background: rgba(138, 43, 226, 0.15);
@@ -194,12 +184,45 @@ img {
   background: var(--accent-purple);
   color: white;
 }
-
 .hamburger {
   display: none;
   font-size: 2rem;
   color: var(--text-primary);
   cursor: pointer;
+}
+
+/* --- Seletor de Idioma (Lang Switcher) --- */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 3px;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.lang-option {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-heading);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.45rem 0.9rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lang-option:hover {
+  color: var(--text-primary);
+}
+.lang-option.active {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-dark));
+  color: #fff;
+  box-shadow: var(--accent-glow);
 }
 
 /* --- Hero Section Dinâmica --- */
@@ -211,8 +234,6 @@ img {
   overflow: hidden;
   padding-top: var(--nav-height);
 }
-
-/* Animação de fundo sutil */
 .hero-bg-animation {
   position: absolute;
   top: -50%;
@@ -227,7 +248,6 @@ img {
   animation: pulseBackground 10s ease-in-out infinite alternate;
   z-index: 1;
 }
-
 .hero-content {
   position: relative;
   z-index: 2;
@@ -266,7 +286,6 @@ img {
   gap: 4rem;
   align-items: center;
 }
-
 .about-image {
   position: relative;
 }
@@ -295,7 +314,6 @@ img {
   top: 10px;
   left: 10px;
 }
-
 .about-subheading {
   font-size: 2rem;
   margin-bottom: 1.5rem;
@@ -305,7 +323,6 @@ img {
   margin-bottom: 2.5rem;
   font-size: 1.05rem;
 }
-
 .stats-row {
   display: flex;
   gap: 3rem;
@@ -336,7 +353,6 @@ img {
   gap: 0.5rem;
   color: var(--accent-light);
 }
-
 .skill-bar-item {
   margin-bottom: 1.5rem;
 }
@@ -359,7 +375,6 @@ img {
   border-radius: 4px;
   position: relative;
 }
-/* Efeito de brilho na ponta da barra */
 .progress-fill::after {
   content: "";
   position: absolute;
@@ -368,11 +383,13 @@ img {
   height: 100%;
   width: 5px;
   background: white;
-  box-shadow: 0 0 10px white, 0 0 20px var(--accent-purple);
+  box-shadow:
+    0 0 10px white,
+    0 0 20px var(--accent-purple);
   opacity: 0.7;
 }
 
-/* --- Works Section (Layout Alternado Zigue-Zague) --- */
+/* --- Works Section --- */
 .works-section {
   background-color: var(--bg-secondary);
 }
@@ -381,23 +398,19 @@ img {
   flex-direction: column;
   gap: 150px;
 }
-
 .project-spotlight {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 4rem;
   align-items: center;
 }
-
-/* Inverte a ordem para projetos pares */
 .project-spotlight.inverted {
   grid-template-columns: 1fr 1.2fr;
   direction: rtl;
 }
 .project-spotlight.inverted .project-details {
   direction: ltr;
-} /* Corrige o texto de volta para LTR */
-
+}
 .project-preview {
   position: relative;
   border-radius: 16px;
@@ -440,7 +453,6 @@ img {
 .project-spotlight:hover .btn-icon {
   transform: scale(1);
 }
-
 .project-number {
   font-family: var(--font-heading);
   font-size: 5rem;
@@ -524,7 +536,6 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-
 .email-big-link {
   font-family: var(--font-heading);
   font-size: 2.5rem;
@@ -545,7 +556,6 @@ img {
 .email-big-link:hover i {
   transform: translate(5px, -5px);
 }
-
 .social-connect {
   display: flex;
   justify-content: center;
@@ -604,7 +614,6 @@ img {
 .reveal-up {
   transform: translateY(50px);
 }
-
 .reveal.active,
 .reveal-left.active,
 .reveal-right.active,
@@ -627,7 +636,7 @@ img {
   }
   .project-spotlight.inverted {
     direction: ltr;
-  } /* Remove inversão no mobile */
+  }
   .project-number {
     top: -20px;
     left: 0;
@@ -662,6 +671,7 @@ img {
   }
   .hamburger {
     display: block;
+    order: 3;
   }
   .hero-title {
     font-size: 2.8rem;
@@ -673,114 +683,98 @@ img {
     width: 100%;
     justify-content: center;
   }
+  .lang-switcher {
+    order: 2;
+  }
 }
-/* --- Layout da Seção --- */
+
+@media (max-width: 420px) {
+  .lang-option {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.65rem;
+  }
+}
+
+/* --- Layout da Seção Skills --- */
 .skills-section {
-    padding: 6rem 0;
-    background-color: #0a0a0c;
+  padding: 6rem 0;
+  background-color: #0a0a0c;
 }
-
 .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
 }
-
-.highlight { color: var(--primary-purple); }
-
+.highlight {
+  color: var(--primary-purple);
+}
 .section-subtitle {
-    text-align: center;
-    color: var(--text-gray);
-    margin-bottom: 4rem;
+  text-align: center;
+  color: var(--text-gray);
+  margin-bottom: 4rem;
 }
-
-/* Categorias */
 .skills-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
-
 .category-title {
-    font-size: 1.4rem;
-    color: #fff;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    border-left: 4px solid var(--primary-purple);
-    padding-left: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-left: 4px solid var(--primary-purple);
+  padding-left: 1rem;
 }
-
-.category-title i { color: var(--primary-purple); }
-
-/* Grid Responsivo */
+.category-title i {
+  color: var(--primary-purple);
+}
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 1.5rem;
 }
-
-/* Card Individual */
 .skill-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    transition: all 0.3s ease;
-    cursor: default;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  cursor: default;
 }
-
-/* --- Estilização da Imagem (IMG) --- */
 .skill-icon {
-    width: 60px;  /* Tamanho fixo para alinhar tudo */
-    height: 60px;
-    object-fit: contain; /* Garante que a imagem não estique */
-    filter: grayscale(100%); /* Começa preto e branco (opcional, remova se quiser cor sempre) */
-    opacity: 0.8;
-    transition: all 0.4s ease;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.4s ease;
 }
-
 .skill-card span {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--text-gray);
-    transition: 0.3s;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-gray);
+  transition: 0.3s;
 }
-
-/* --- Hover Effects --- */
 .skill-card:hover {
-    border-color: var(--primary-purple);
-    transform: translateY(-7px);
-    background: #29292e;
-    box-shadow: 0 10px 30px -10px rgba(130, 87, 229, 0.25);
+  border-color: var(--primary-purple);
+  transform: translateY(-7px);
+  background: #29292e;
+  box-shadow: 0 10px 30px -10px rgba(130, 87, 229, 0.25);
 }
-
 .skill-card:hover .skill-icon {
-    filter: grayscale(0%); /* Restaura a cor original */
-    transform: scale(1.1); /* Aumenta levemente */
-    opacity: 1;
-    /* Cria um brilho roxo ao redor da imagem PNG */
-    filter: drop-shadow(0 0 8px rgba(130, 87, 229, 0.5)); 
+  filter: drop-shadow(0 0 8px rgba(130, 87, 229, 0.5));
+  transform: scale(1.1);
+  opacity: 1;
 }
-
 .skill-card:hover span {
-    color: #fff;
-}
-
-/* Classes para JS Reveal */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+  color: #fff;
 }
